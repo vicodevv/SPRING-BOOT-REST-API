@@ -2,7 +2,9 @@ package com.example.demo.student;
 
 import java.time.LocalDate;
 
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -12,6 +14,7 @@ import javax.persistence.Table;
 public class Student {
     @Id
     @SequenceGenerator(name = "student_sequence", sequenceName = "student_sequence", allocationSize = 1)
+    @GeneratedValue(generator = "student_sequence", strategy = javax.persistence.GenerationType.SEQUENCE)
     private long id;
     private String name;
     private Integer age;
