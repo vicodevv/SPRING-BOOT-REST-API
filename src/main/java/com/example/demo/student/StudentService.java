@@ -25,6 +25,15 @@ public class StudentService {
         if(studentOptional.isPresent()){
             throw new IllegalStateException("User already exists");
         }
+        studentRepository.save(student);
         System.out.println(student);
+    }
+    public void deleteStudent(Long studetID){
+        boolean exists = studentRepository.existsById(studetID);
+
+        if (!exists){
+            throw new IllegalStateException("Student with id " + studetID + " does not exist");
+        }
+        studentRepository.deleteById(studetID);
     }
 }
