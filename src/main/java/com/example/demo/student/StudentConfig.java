@@ -17,13 +17,11 @@ public class StudentConfig {
         return args -> {
             Student victor = new Student(
 						"Victor Omoniyi",
-						21,
-						LocalDate.of(2001, Month.JULY, 13), 
+						LocalDate.of(2001, Month.OCTOBER, 13), 
 						"vomoniyi2001@gmail.com"
 				);
             Student hamis = new Student(
                         "AlHamis Badru",
-                        20,
                         LocalDate.of(2002, Month.JUNE, 30),
                         "alhamisbadru@gmail.com"
             );
